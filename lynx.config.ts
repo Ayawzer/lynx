@@ -1,9 +1,12 @@
 import { defineConfig } from '@lynx-js/rspeedy'
-
 import { pluginQRCode } from '@lynx-js/qrcode-rsbuild-plugin'
 import { pluginReactLynx } from '@lynx-js/react-rsbuild-plugin'
 
 export default defineConfig({
+  server: {
+    port: 3000,
+    host: "192.168.100.2",
+  },
   plugins: [
     pluginQRCode({
       schema(url) {
